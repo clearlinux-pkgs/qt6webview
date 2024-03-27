@@ -6,10 +6,10 @@
 # autospec commit: c02b2fe
 #
 Name     : qt6webview
-Version  : 6.6.2
-Release  : 13
-URL      : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtwebview-everywhere-src-6.6.2.tar.xz
-Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtwebview-everywhere-src-6.6.2.tar.xz
+Version  : 6.6.3
+Release  : 14
+URL      : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtwebview-everywhere-src-6.6.3.tar.xz
+Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtwebview-everywhere-src-6.6.3.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-3.0
@@ -55,15 +55,15 @@ license components for the qt6webview package.
 
 
 %prep
-%setup -q -n qtwebview-everywhere-src-6.6.2
-cd %{_builddir}/qtwebview-everywhere-src-6.6.2
+%setup -q -n qtwebview-everywhere-src-6.6.3
+cd %{_builddir}/qtwebview-everywhere-src-6.6.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1711174519
+export SOURCE_DATE_EPOCH=1711502518
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -124,7 +124,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1711174519
+export SOURCE_DATE_EPOCH=1711502518
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6webview
 cp %{_builddir}/qtwebview-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6webview/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -148,24 +148,24 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/QtWebView/6.6.2/QtWebView/private/qabstractwebview_p.h
-/usr/include/QtWebView/6.6.2/QtWebView/private/qnativeviewcontroller_p.h
-/usr/include/QtWebView/6.6.2/QtWebView/private/qwebview_p.h
-/usr/include/QtWebView/6.6.2/QtWebView/private/qwebviewfactory_p.h
-/usr/include/QtWebView/6.6.2/QtWebView/private/qwebviewinterface_p.h
-/usr/include/QtWebView/6.6.2/QtWebView/private/qwebviewloadrequest_p.h
-/usr/include/QtWebView/6.6.2/QtWebView/private/qwebviewplugin_p.h
+/usr/include/QtWebView/6.6.3/QtWebView/private/qabstractwebview_p.h
+/usr/include/QtWebView/6.6.3/QtWebView/private/qnativeviewcontroller_p.h
+/usr/include/QtWebView/6.6.3/QtWebView/private/qwebview_p.h
+/usr/include/QtWebView/6.6.3/QtWebView/private/qwebviewfactory_p.h
+/usr/include/QtWebView/6.6.3/QtWebView/private/qwebviewinterface_p.h
+/usr/include/QtWebView/6.6.3/QtWebView/private/qwebviewloadrequest_p.h
+/usr/include/QtWebView/6.6.3/QtWebView/private/qwebviewplugin_p.h
 /usr/include/QtWebView/QtWebView
 /usr/include/QtWebView/QtWebViewDepends
 /usr/include/QtWebView/QtWebViewVersion
 /usr/include/QtWebView/qtwebviewfunctions.h
 /usr/include/QtWebView/qtwebviewversion.h
 /usr/include/QtWebView/qwebview_global.h
-/usr/include/QtWebViewQuick/6.6.2/QtWebViewQuick/private/qquickviewcontroller_p.h
-/usr/include/QtWebViewQuick/6.6.2/QtWebViewQuick/private/qquickwebview_p.h
-/usr/include/QtWebViewQuick/6.6.2/QtWebViewQuick/private/qquickwebviewloadrequest_p.h
-/usr/include/QtWebViewQuick/6.6.2/QtWebViewQuick/private/qquickwebviewsettings_p.h
-/usr/include/QtWebViewQuick/6.6.2/QtWebViewQuick/private/qtwebviewquickglobal_p.h
+/usr/include/QtWebViewQuick/6.6.3/QtWebViewQuick/private/qquickviewcontroller_p.h
+/usr/include/QtWebViewQuick/6.6.3/QtWebViewQuick/private/qquickwebview_p.h
+/usr/include/QtWebViewQuick/6.6.3/QtWebViewQuick/private/qquickwebviewloadrequest_p.h
+/usr/include/QtWebViewQuick/6.6.3/QtWebViewQuick/private/qquickwebviewsettings_p.h
+/usr/include/QtWebViewQuick/6.6.3/QtWebViewQuick/private/qtwebviewquickglobal_p.h
 /usr/include/QtWebViewQuick/QtWebViewQuick
 /usr/include/QtWebViewQuick/QtWebViewQuickDepends
 /usr/include/QtWebViewQuick/QtWebViewQuickVersion
@@ -182,6 +182,7 @@ popd
 /usr/lib64/cmake/Qt6WebView/Qt6WebViewConfigVersion.cmake
 /usr/lib64/cmake/Qt6WebView/Qt6WebViewConfigVersionImpl.cmake
 /usr/lib64/cmake/Qt6WebView/Qt6WebViewDependencies.cmake
+/usr/lib64/cmake/Qt6WebView/Qt6WebViewPlugins.cmake
 /usr/lib64/cmake/Qt6WebView/Qt6WebViewTargets-relwithdebinfo.cmake
 /usr/lib64/cmake/Qt6WebView/Qt6WebViewTargets.cmake
 /usr/lib64/cmake/Qt6WebView/Qt6WebViewVersionlessTargets.cmake
@@ -206,13 +207,13 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libQt6WebView.so.6.6.2
-/V3/usr/lib64/libQt6WebViewQuick.so.6.6.2
+/V3/usr/lib64/libQt6WebView.so.6.6.3
+/V3/usr/lib64/libQt6WebViewQuick.so.6.6.3
 /V3/usr/lib64/qt6/qml/QtWebView/libqtwebviewquickplugin.so
 /usr/lib64/libQt6WebView.so.6
-/usr/lib64/libQt6WebView.so.6.6.2
+/usr/lib64/libQt6WebView.so.6.6.3
 /usr/lib64/libQt6WebViewQuick.so.6
-/usr/lib64/libQt6WebViewQuick.so.6.6.2
+/usr/lib64/libQt6WebViewQuick.so.6.6.3
 /usr/lib64/qt6/metatypes/qt6webview_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/metatypes/qt6webviewquick_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/modules/WebView.json
