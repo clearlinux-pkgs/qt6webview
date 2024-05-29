@@ -1,3 +1,4 @@
+libQt6WebView.so.6:NonQt
 libQt6WebView.so.6:Qt_6
 libQt6WebView.so.6:Qt_6_PRIVATE_API
 libQt6WebView.so.6:_ZN14QWebViewPlugin11qt_metacallEN11QMetaObject4CallEiPPv
@@ -130,6 +131,7 @@ libQt6WebView.so.6:_ZThn24_N8QWebView8setFocusEb
 libQt6WebView.so.6:_ZThn24_N8QWebViewD0Ev
 libQt6WebView.so.6:_ZThn24_N8QWebViewD1Ev
 libQt6WebView.so.6:_ZThn24_NK8QWebView10parentViewEv
+libQt6WebViewQuick.so.6:NonQt
 libQt6WebViewQuick.so.6:Qt_6
 libQt6WebViewQuick.so.6:Qt_6_PRIVATE_API
 libQt6WebViewQuick.so.6:_Z28qml_register_types_QtWebViewv
